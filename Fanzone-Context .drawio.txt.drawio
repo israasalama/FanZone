@@ -1,0 +1,176 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="fanzone-context" name="FanZone System Context">
+    <mxGraphModel dx="1382" dy="733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#a8a8a8, #1a1a1a);strokeColor=#666666;verticalAlign=top;fontSize=9;fontColor=#333333;" value="Legend" vertex="1">
+          <mxGeometry height="296" width="128" x="918" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-person" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;" value="Person / user role" vertex="1">
+          <mxGeometry height="38" width="86" x="940" y="349" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-system" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=8;" value="System in scope" vertex="1">
+          <mxGeometry height="28" width="86" x="940" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-external" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#666666;fontColor=#333333;fontSize=8;" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;External system&lt;/font&gt;" vertex="1">
+          <mxGeometry height="26" width="86" x="940" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-arrows" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontColor=#333333;fontSize=8;" value="solid arrow = request / data flow&lt;br&gt;dashed arrow = asynchronous callback" vertex="1">
+          <mxGeometry height="86" width="86" x="940" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-1" edge="1" parent="1" source="fan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fanzone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-3" connectable="0" parent="gjrdS_xch2siu7T365a2-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Books, pays, requests&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;friend authorization [HTTPS]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.6263" as="geometry">
+            <mxPoint x="21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fan" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;" value="&lt;b&gt;Fan&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;Browses matches, books tickets, buys for friends via authorization" vertex="1">
+          <mxGeometry height="108" width="86" x="179" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-2" edge="1" parent="1" source="friend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="fanzone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-4" connectable="0" parent="gjrdS_xch2siu7T365a2-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Approves / rejects&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;[HTTPS]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.4753" y="1" as="geometry">
+            <mxPoint x="27" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="friend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;" value="&lt;b&gt;Authorizing Friend&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Person - a Fan]&lt;/i&gt;&lt;br&gt;Approves or rejects purchase requests" vertex="1">
+          <mxGeometry height="97" width="86" x="179" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-5" edge="1" parent="1" source="admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="fanzone">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="640" />
+              <mxPoint x="360" y="666" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-6" connectable="0" parent="gjrdS_xch2siu7T365a2-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Manages data,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;refunds [HTTPS]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.5436" y="-1" as="geometry">
+            <mxPoint x="3" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="admin" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;" value="&lt;b&gt;Admin&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;Manages matches, stadiums, releases, refunds, logs" vertex="1">
+          <mxGeometry height="97" width="86" x="179" y="591" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-8" edge="1" parent="1" source="support" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="fanzone">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="764" />
+              <mxPoint x="360" y="738" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-9" connectable="0" parent="gjrdS_xch2siu7T365a2-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Looks up bookings&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;[HTTPS]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.6689" y="2" as="geometry">
+            <mxPoint x="14" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="support" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;" value="&lt;b&gt;Customer Support&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;Resolves complaints, refunds, ticket issues" vertex="1">
+          <mxGeometry height="97" width="86" x="179" y="716" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-10" edge="1" parent="1" source="marketing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="fanzone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-11" connectable="0" parent="gjrdS_xch2siu7T365a2-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Promotions, consented&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;analytics [HTTPS]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.4668" y="-2" as="geometry">
+            <mxPoint x="14" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="marketing" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;" value="&lt;b&gt;Marketing Team&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;Runs promotions and loyalty (consented data only)" vertex="1">
+          <mxGeometry height="108" width="86" x="179" y="841" as="geometry" />
+        </mxCell>
+        <mxCell id="81cyHRwaX3OUz5CkrdXA-7" edge="1" parent="1" source="gateOperator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=gap;" target="gateValidation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81cyHRwaX3OUz5CkrdXA-8" connectable="0" parent="81cyHRwaX3OUz5CkrdXA-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Scans tickets,&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;views validation results&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0586" y="-2" as="geometry">
+            <mxPoint x="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gateOperator" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;" value="&lt;b&gt;Gate Operator&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Person]&lt;/i&gt;&lt;br&gt;Scans tickets at stadium gate using the gate system" vertex="1">
+          <mxGeometry height="85" width="86" x="960" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-14" edge="1" parent="1" source="fanzone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gateValidation">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="491" y="833" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-15" connectable="0" parent="gjrdS_xch2siu7T365a2-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Publishes valid ticket list [HTTPS]&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.4456" as="geometry">
+            <mxPoint x="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-16" edge="1" parent="1" source="fanzone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-19" connectable="0" parent="gjrdS_xch2siu7T365a2-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;E-tickets, authorization requests&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;to fans and friends [SMTP/API]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.081" y="-1" as="geometry">
+            <mxPoint x="-15" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-22" edge="1" parent="1" source="fanzone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-23" connectable="0" parent="gjrdS_xch2siu7T365a2-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Payment / refund&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;requests [HTTPS]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.2448" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fanzone" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=8;fontColor=#333333;" value="&lt;b&gt;FanZone Ticketing System&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Software System]&lt;br&gt;&lt;/i&gt;Match browsing, booking, delegated group purchasing, payment, e-ticket issuing" vertex="1">
+          <mxGeometry height="144" width="87" x="426" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-24" edge="1" parent="1" source="payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;dashed=1;" target="fanzone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-25" connectable="0" parent="gjrdS_xch2siu7T365a2-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Payment result&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;[Webhook]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2043" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="payment" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;fontSize=8;" value="&lt;b&gt;Payment Gateway / Bank&lt;/b&gt;&lt;br&gt;&lt;i&gt;[External System]&lt;/i&gt;&lt;br&gt;Card and wallet payments, refunds, transaction verification" vertex="1">
+          <mxGeometry height="121" width="86" x="720" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="81cyHRwaX3OUz5CkrdXA-1" edge="1" parent="1" source="email" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=gap;" target="friend">
+          <mxGeometry relative="1" x="-0.0478" as="geometry" />
+        </mxCell>
+        <mxCell id="81cyHRwaX3OUz5CkrdXA-2" connectable="0" parent="81cyHRwaX3OUz5CkrdXA-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="&lt;p&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;E-tickets, authorization requests [email]&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.139" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="email" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;fontSize=8;" value="&lt;b&gt;Email Service&lt;/b&gt;&lt;br&gt;&lt;i&gt;[External System]&lt;/i&gt;&lt;br&gt;Sends e-tickets, authorization requests, notifications" vertex="1">
+          <mxGeometry height="96" width="86" x="720" y="654" as="geometry" />
+        </mxCell>
+        <mxCell id="81cyHRwaX3OUz5CkrdXA-4" edge="1" parent="1" source="gateValidation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=gap;" target="fanzone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81cyHRwaX3OUz5CkrdXA-5" connectable="0" parent="81cyHRwaX3OUz5CkrdXA-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Sends scan results [HTTPS]&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0042" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gateValidation" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;fontSize=8;" value="&lt;b&gt;Gate Validation System&lt;/b&gt;&lt;br&gt;&lt;i&gt;[External System]&lt;/i&gt;&lt;br&gt;Validates tickets at gates, offline-capable" vertex="1">
+          <mxGeometry height="97" width="86" x="720" y="784" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-12" edge="1" parent="1" source="epfca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="fanzone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjrdS_xch2siu7T365a2-13" connectable="0" parent="gjrdS_xch2siu7T365a2-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Schedules, stadiums,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;pricing [API/feed] (assumed)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.5883" y="2" as="geometry">
+            <mxPoint y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epfca" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;fontSize=8;" value="&lt;b&gt;EPFCA Data Source&lt;/b&gt;&lt;br&gt;&lt;i&gt;[External System]&lt;/i&gt;&lt;br&gt;Official schedules, stadium info, pricing" vertex="1">
+          <mxGeometry height="108" width="86" x="179" y="977" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
